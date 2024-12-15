@@ -1,0 +1,50 @@
+* {
+  font-family: monospace;
+  background-color: aqua;
+}
+
+body {
+  padding: 0px;
+  margin: auto;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+nav ul {
+  display: flex; /* Apply Flexbox to the <ul> */
+  justify-content: left; /* Distribute items evenly */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  background-color: black;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 20px;
+  padding: 10px 20px; /* Add padding for better spacing */
+  color: rgb(205, 187, 187);
+  background-color: black;
+}
+
+a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
+}
+button:hover {
+  color: rgb(229, 229, 229);
+  background-color: rgb(202, 28, 28);
+}

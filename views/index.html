@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>backend</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home </a></li>
+            <li><a href="/showclassroom">Students </a></li>
+            <li><a href="/">About us </a></li>
+
+        </ul>
+
+
+
+    </nav>
+
+</header>
+
+<body>
+    <button type="button" id="getstudentsbutton">Get Students </button>
+    <h1 id="classroomnameheader"></h1>
+    <hr>
+
+
+    <script>
+
+        //load class name 
+        async function getClassName() {
+            //get only classroom name 
+            fetch("http://localhost:3000/showclassroom", {
+                method: "GET"
+            })
+                .then((response) => {
+                    if (!response) {
+                        throw new Error("error", Error);
+                    }
+                    return response.json();
+                })
+
+                .then((data) => {
+                    const className = data.name;
+                    console.log(className);
+                    document.getElementById("classroomnameheader").innerHTML = className;
+                })
+                .catch((error) => {
+                    console.error("error", error)
+                })
+        }
+
+        getClassName();
+    </script>
+</body>
+
+</html>
